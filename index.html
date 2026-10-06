@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#ffd1e0">
+<title>Happy National Couple Day ❤️</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<noscript>
+  <p style="padding:40px 20px;text-align:center;font-family:sans-serif;color:#8c1d47;">
+    Please turn on JavaScript to open your surprise, my princess ❤️
+  </p>
+</noscript>
+
+<!-- ============ BACKGROUND + EFFECT LAYERS ============ -->
+<div id="bg" aria-hidden="true">
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+  <div class="glow glow3"></div>
+  <div id="sparkles"></div>
+</div>
+<div id="fx" aria-hidden="true"></div>
+<div id="burst" aria-hidden="true"></div>
+<div id="wipe" aria-hidden="true"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- ============ MUSIC ============ -->
+<button id="musicBtn" class="music-btn hidden" type="button">🎵 Music On</button>
+<audio id="bgm" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============ SCREEN 1: FIRST PAGE ============ -->
+<section id="welcome" class="screen active">
+  <div id="welcomeFlowers" class="welcome-flowers" aria-hidden="true"></div>
+  <div class="screen-inner">
+    <div class="heart-wrap" aria-hidden="true">
+      <svg class="heart-svg" viewBox="0 0 32 29.6">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff8fb3"/>
+            <stop offset="1" stop-color="#e0245e"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#hg)" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+      </svg>
+    </div>
+    <h1 class="title">Happy National Couple Day,<br><span class="accent">My Princess Marina ❤️</span></h1>
+    <p class="subtitle">Made with love by your Yousef</p>
+    <button id="enterBtn" class="btn btn-big" type="button">Enter My Baby ❤️</button>
+  </div>
+</section>
+
+<!-- ============ SCREEN 2: PASSWORD ============ -->
+<section id="lock" class="screen">
+  <div class="screen-inner card-glass" id="lockCard">
+    <div class="lock-icon" aria-hidden="true">🔐</div>
+    <h2 class="title title-sm">Only my princess can enter ❤️</h2>
+    <p class="subtitle">Type the secret password to unlock your surprise.</p>
+    <form id="pwForm" autocomplete="off" novalidate>
+      <label for="pwInput" class="sr-only">Password</label>
+      <div class="pw-wrap">
+        <input id="pwInput" type="password" placeholder="Password…" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go">
+        <button id="pwToggle" class="pw-toggle" type="button" aria-label="Show or hide the password">Show</button>
+      </div>
+      <p id="pwMsg" class="pw-msg" role="status" aria-live="polite"></p>
+      <button class="btn btn-big" type="submit">Unlock My Surprise 💌</button>
+    </form>
+    <button id="hintBtn" class="link-btn" type="button">Need a hint? 🤍</button>
+    <p id="hintText" class="hint hidden">Three words… and it starts with "my" 💌</p>
+  </div>
+</section>
+
+<!-- ============ SCREEN 3: UNLOCKED ============ -->
+<section id="unlocked" class="screen">
+  <div class="screen-inner">
+    <div class="heart-wrap" aria-hidden="true">
+      <svg class="heart-svg" viewBox="0 0 32 29.6">
+        <path fill="url(#hg)" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+      </svg>
+    </div>
+    <h2 class="title">Welcome,<br><span class="accent">My Princess Marina ❤️</span></h2>
+    <p class="subtitle big">I made this little world just for you.</p>
+    <p class="subtitle">Made by your Yousef ❤️</p>
+    <button id="openBtn" class="btn btn-big" type="button">Open Your Surprise 💌</button>
+  </div>
+</section>
+
+<!-- ============ MAIN WEBSITE ============ -->
+<main id="main" class="hidden">
+
+  <header class="wrap main-intro">
+    <p class="eyebrow">Made by your Yousef ❤️</p>
+    <h2 class="section-title">Here we go, my princess 🌸</h2>
+    <p class="section-sub">Scroll down slowly. Every little thing here is for you.</p>
+    <div class="scroll-cue" aria-hidden="true">⌄</div>
+  </header>
+
+  <!-- ---------- SECTION 1: OUR STORY ---------- -->
+  <section id="story" class="chapter">
+    <div class="wrap">
+      <h2 class="section-title reveal">Our Story ❤️</h2>
+      <p class="section-sub reveal">It all started with a conversation...</p>
+
+      <div class="timeline reveal-line">
+        <div class="tl-item reveal">
+          <div class="tl-dot" aria-hidden="true">💬</div>
+          <div class="tl-card">
+            <span class="tl-date">April 28, 2026</span>
+            <h3>The day we started talking.</h3>
+            <p>It all started with a conversation... and I had no idea how much it would end up meaning to me.</p>
+            <p id="countTalk" class="tl-count"></p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot" aria-hidden="true">🌹</div>
+          <div class="tl-card">
+            <span class="tl-date">June 13, 2026</span>
+            <h3>The day I first met you.</h3>
+            <p>And then June 13, 2026 became one of those dates I'll always remember.</p>
+            <p id="countMet" class="tl-count"></p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot" aria-hidden="true">💕</div>
+          <div class="tl-card">
+            <span class="tl-date">Today</span>
+            <h3>Happy National Couple Day.</h3>
+            <p>This little website is my way of saying thank you for being in my life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- SECTION 2: REASONS WHY I LOVE YOU ---------- -->
+  <section id="reasons" class="chapter">
+    <div class="wrap">
+      <h2 class="section-title reveal">Reasons Why I Love You ❤️</h2>
+      <p class="section-sub reveal">Tap every card, my princess. There are 16 of them 😌</p>
+      <p class="center reveal"><span class="counter">Found: <span id="reasonCount">0</span> / 16</span></p>
+
+      <div class="reason-grid reveal">
+        <button class="reason" type="button"><span class="r-num">1</span><span class="r-emoji">😊</span><span class="r-text">Your sweet, cute smile</span></button>
+        <button class="reason" type="button"><span class="r-num">2</span><span class="r-emoji">😄</span><span class="r-text">Your laugh</span></button>
+        <button class="reason" type="button"><span class="r-num">3</span><span class="r-emoji">🌹</span><span class="r-text">Your beauty</span></button>
+        <button class="reason" type="button"><span class="r-num">4</span><span class="r-emoji">💞</span><span class="r-text">Your love for me</span></button>
+        <button class="reason" type="button"><span class="r-num">5</span><span class="r-emoji">✨</span><span class="r-text">Your personality</span></button>
+        <button class="reason" type="button"><span class="r-num">6</span><span class="r-emoji">💫</span><span class="r-text">Your beautiful eyes</span></button>
+        <button class="reason" type="button"><span class="r-num">7</span><span class="r-emoji">🎀</span><span class="r-text">Your hair</span></button>
+        <button class="reason" type="button"><span class="r-num">8</span><span class="r-emoji">🤝</span><span class="r-text">Your support</span></button>
+        <button class="reason" type="button"><span class="r-num">9</span><span class="r-emoji">💎</span><span class="r-text">Your honesty</span></button>
+        <button class="reason" type="button"><span class="r-num">10</span><span class="r-emoji">🌷</span><span class="r-text">Your kindness</span></button>
+        <button class="reason" type="button"><span class="r-num">11</span><span class="r-emoji">🙈</span><span class="r-text">Your jealousy</span></button>
+        <button class="reason" type="button"><span class="r-num">12</span><span class="r-emoji">📖</span><span class="r-text">Your stories</span></button>
+        <button class="reason" type="button"><span class="r-num">13</span><span class="r-emoji">💡</span><span class="r-text">Your ideas</span></button>
+        <button class="reason" type="button"><span class="r-num">14</span><span class="r-emoji">😎</span><span class="r-text">Your attitude</span></button>
+        <button class="reason" type="button"><span class="r-num">15</span><span class="r-emoji">🤏</span><span class="r-text">Your height — even though I'm taller than you 😂❤️</span></button>
+        <button class="reason" type="button"><span class="r-num">16</span><span class="r-emoji">💌</span><span class="r-text">Your compliments</span></button>
+      </div>
+
+      <p id="reasonDone" class="reason-done">That's all 16 ❤️ and honestly I could keep going.</p>
+
+      <blockquote class="big-quote reveal">
+        You are my baby, and you make my life so much better just by being in it.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ---------- SECTION 3: LOVE LETTER ---------- -->
+  <section id="letter" class="chapter">
+    <div class="wrap">
+      <h2 class="section-title reveal">A Letter From Your Yousef 💌</h2>
+
+      <div id="envWrap" class="env-wrap reveal">
+        <button id="envelope" class="envelope" type="button" aria-label="Open the letter">
+          <span class="env-back"></span>
+          <span class="env-flap"></span>
+          <span class="env-front"></span>
+          <span class="env-seal">❤️</span>
+        </button>
+        <p class="env-hint">Tap the envelope to open it 💌</p>
+      </div>
+
+      <article id="letterPaper" class="paper hidden">
+        <p class="lp reveal dear">Dear Marmorti,</p>
+        <p class="lp reveal">I honestly don't even know how to start this because there are so many things I want to say to you.</p>
+        <p class="lp reveal">I just want you to know how much you mean to me.</p>
+        <p class="lp reveal">When I think about us, I always think about April 28, 2026, because that's when we started talking. And then June 13, 2026, when I first met you. I didn't know how much those dates would end up meaning to me.</p>
+        <p class="lp reveal">Since then, you've become such an important part of my life.</p>
+        <p class="lp reveal">I love so many things about you.</p>
+        <p class="lp reveal">I love your smile, your laugh, your beautiful eyes, your hair, your personality, and honestly even the little things you probably don't think anyone notices.</p>
+        <p class="lp reveal">
+          I love the way you talk to me.<br>
+          I love your stories.<br>
+          I love your ideas.<br>
+          I love your compliments.<br>
+          I love your kindness.<br>
+          I love your honesty.<br>
+          I love how you support me.<br>
+          I love your jealousy ❤️
+        </p>
+        <p class="lp reveal">But more than anything, I love you for being you.</p>
+        <p class="lp reveal">You're not just someone I love because you're beautiful. You're someone I love because of the way you make me feel. You are way more than my girlfriend.</p>
+        <p class="lp reveal">
+          You make me happy.<br>
+          You make normal days feel better.<br>
+          You make me feel loved.<br>
+          And you make my life so much better just by being part of it.
+        </p>
+        <p class="lp reveal">Sometimes I don't think you realize how much you mean to me. I'm honestly so lucky to have you.</p>
+        <p class="lp reveal">I just want us to keep making memories, laughing together, annoying each other, supporting each other and being with each other forever, and make a family and get 50 kids 😂❤️</p>
+        <p class="lp reveal">I want you to know that whenever you need me, I'm here. I want to be someone you can always talk to. Someone you can laugh with. Someone you can trust. Someone who makes you feel loved.</p>
+        <p class="lp reveal">You are my baby Marina. And I'm so grateful that you're mine.</p>
+        <p class="lp reveal">
+          Thank you for being you.<br>
+          Thank you for loving me.<br>
+          Thank you for all the little things you do.<br>
+          And thank you for making my life better.
+        </p>
+        <p class="lp reveal">I love you more than I can put into one website, one letter, or even a thousand words.</p>
+        <p class="lp reveal">Happy National Couple Day donyeti ❤️</p>
+        <p class="lp reveal sign">Always yours,<br>Yousef ❤️</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ---------- SECTION 4: OUR LITTLE WORLD ---------- -->
+  <section id="world" class="chapter">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Our Little World ❤️</h2>
+      <p class="section-sub reveal">Press the button. Tap the cards. There are little secrets hiding here 🤫</p>
+
+      <div class="reveal">
+        <button id="clickMe" class="btn btn-big no-auto" type="button">Click Me ❤️</button>
+      </div>
+      <div id="bubble" class="bubble" role="status" aria-live="polite">Press the button, my princess 💕</div>
+
+      <p class="center"><span class="counter">Secrets found: <span id="secretCount">0</span> / 6</span></p>
+
+      <div id="secretGrid" class="secret-grid">
+        <button class="secret" type="button" data-msg="You are my favorite person ❤️"><span class="s-front">💌<small>Tap me</small></span><span class="s-back"></span></button>
+        <button class="secret" type="button" data-msg="You make me smile."><span class="s-front">💌<small>Tap me</small></span><span class="s-back"></span></button>
+        <button class="secret" type="button" data-msg="I love you habibiti."><span class="s-front">💌<small>Tap me</small></span><span class="s-back"></span></button>
+        <button class="secret" type="button" data-msg="I'm lucky to have you."><span class="s-front">💌<small>Tap me</small></span><span class="s-back"></span></button>
+        <button class="secret" type="button" data-msg="You're stuck with me huh? 😂❤️"><span class="s-front">💌<small>Tap me</small></span><span class="s-back"></span></button>
+        <button class="secret" type="button" data-msg="Yousef loves Marina ❤️"><span class="s-front">💌<small>Tap me</small></span><span class="s-back"></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- SECTION 5: FLOWERS ---------- -->
+  <section id="flowers" class="chapter">
+    <div class="wrap">
+      <h2 class="section-title reveal">These flowers are for you, my princess 🌷❤️</h2>
+      <p class="section-sub reveal">Tap anywhere in the garden to plant more 🌸</p>
+      <div id="garden" class="garden reveal" aria-label="A little flower garden. Tap to plant more flowers."></div>
+    </div>
+  </section>
+
+  <!-- ---------- FINAL SECTION ---------- -->
+  <section id="final" class="chapter final">
+    <div id="finalFlowers" class="final-flowers" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="f-line f1">Marmorty if you made it all the way here</p>
+      <p class="f-line f2">I hope you know how much I love you.</p>
+      <p class="f-line f3">You are my baby.<br>You are my favorite person.<br>You make my life so much better.<br>And I hope I can keep making you smile forever❤️</p>
+      <p class="f-line f4">Happy National Couple Day, my princess.</p>
+      <p class="f-line f5">Always yours,<br>Yousef ❤️</p>
+
+      <div id="finalActions" class="final-actions">
+        <button id="moreBtn" class="btn btn-light no-auto" type="button">One more ❤️</button>
+        <button id="topBtn" class="btn btn-light" type="button">Back to the top 🌸</button>
+      </div>
+
+      <p class="site-foot">Made with love by Yousef · National Couple Day 2026</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
